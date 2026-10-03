@@ -305,10 +305,6 @@ function App() {
                   />
                 </div>
               </div>
-              <span className="float-chip chip-java">Java</span>
-              <span className="float-chip chip-spring">Spring Boot</span>
-              <span className="float-chip chip-react">React</span>
-              <span className="float-chip chip-aws">AWS</span>
             </Reveal>
           </div>
         </section>
