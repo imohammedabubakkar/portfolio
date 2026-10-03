@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a Java Full-Stack developer's skills, projects, education, and contact info in a clean, responsive portfolio for career opportunities.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
