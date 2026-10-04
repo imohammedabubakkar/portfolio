@@ -46,7 +46,13 @@ function Button({ children, href, variant = "primary", icon, download, type = "b
   const className = `button button--${variant}`;
   if (href) {
     return (
-      <a className={className} download={download} href={href}>
+      <a
+        className={className}
+        download={download}
+        href={href}
+        rel={href.startsWith("https://") ? "noreferrer" : undefined}
+        target={href.startsWith("https://") ? "_blank" : undefined}
+      >
         {children}
         {icon && <Icon name={icon} size={17} />}
       </a>
@@ -137,6 +143,8 @@ const projects = [
   {
     title: "NRI Remote Voting System",
     code: "01",
+    github: "https://github.com/imohammedabubakkar/nri-voting",
+    demo: "https://nri-voting-6grf-blue.vercel.app/",
     stack: ["React", "Node.js", "Express.js", "MongoDB"],
     bullets: [
       "Web-based remote voting system for eligible Indian citizens residing abroad.",
@@ -148,6 +156,8 @@ const projects = [
   {
     title: "CloudDeployX",
     code: "02",
+    github: "https://github.com/imohammedabubakkar/cloud_deploy",
+    demo: "https://cloud-deploy-one.vercel.app/",
     stack: ["Java", "Spring Boot", "React.js", "PostgreSQL", "Docker", "Kubernetes", "AWS"],
     bullets: [
       "Cloud-native platform for application deployment and monitoring.",
@@ -159,6 +169,8 @@ const projects = [
   {
     title: "FinTrack – Fraud Detection System",
     code: "03",
+    github: "https://github.com/imohammedabubakkar/fin-track",
+    demo: "https://fin-track-two-self.vercel.app/",
     stack: ["Java", "Spring Boot", "React.js", "PostgreSQL", "Kafka"],
     bullets: [
       "Full-stack financial transaction platform using React.js, Spring Boot, and REST APIs.",
@@ -197,8 +209,8 @@ function ProjectCard({ project, index }: { project: (typeof projects)[number]; i
         <div className="tags">{project.stack.map((item) => <Tag key={item}>{item}</Tag>)}</div>
         <ul>{project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
         <div className="project-actions">
-          <Button href="#" icon="github" variant="outline">GitHub</Button>
-          <Button href="#" icon="external" variant="ghost">Live Demo</Button>
+          <Button href={project.github ?? "#"} icon="github" variant="outline">GitHub</Button>
+          <Button href={project.demo ?? "#"} icon="external" variant="ghost">Live Demo</Button>
         </div>
       </div>
     </article>
