@@ -104,7 +104,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-inner">
-        <a aria-label="Mohammed Abubakkar home" className="logo" href="#top">MA<span>.</span></a>
+        <a aria-label="Mohammed Abubakkar home" className="logo" href="#top">MA<span aria-hidden="true" /></a>
         <nav aria-label="Primary navigation" className={open ? "nav-links is-open" : "nav-links"}>
           {navItems.map((item) => (
             <a href={`#${item.toLowerCase()}`} key={item} onClick={() => setOpen(false)}>{item}</a>
