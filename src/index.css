@@ -90,18 +90,8 @@ h1, h2, h3 { color: var(--text); font-family: var(--font-heading); letter-spacin
   transform-origin: left;
 }
 .nav-inner { width: min(calc(100% - 48px), var(--max-width)); height: 76px; margin: auto; display: flex; align-items: center; }
-.logo {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 3px;
-  color: var(--text);
-  font: 800 31px/.82 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  letter-spacing: -0.055em;
-  transform: scaleX(.88);
-  transform-origin: left center;
-}
-.logo span { width: 8px; height: 8px; margin: 0 0 1px 0; border-radius: 50%; background: var(--blue-light); }
-.eyebrow, .project-meta span, .education-date { color: var(--blue-light); }
+.logo { font: 700 22px/1 var(--font-heading); letter-spacing: -0.06em; }
+.logo span, .eyebrow, .project-meta span, .education-date { color: var(--blue-light); }
 .nav-links { display: flex; gap: 28px; margin-left: auto; align-items: center; }
 .nav-links > a { color: var(--muted); font-size: 13px; font-weight: 500; transition: color 180ms ease; }
 .nav-links > a:hover { color: var(--text); }
