@@ -1,7 +1,7 @@
 import { FormEvent, ReactNode, useEffect, useRef, useState } from "react";
 import profilePhoto from "./assets/mohammed-abubakkar-profile.jpeg";
 
-const resumeUrl = "/Mohammed-Abubakkar-Resume.pdf";
+const resumeUrl = "/MOHAMMED ABUBAKKAR I.pdf";
 
 type ButtonProps = {
   children: ReactNode;
