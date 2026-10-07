@@ -414,7 +414,12 @@ function App() {
                 <span id="resume"><Button download href={resumeUrl} variant="outline">Download Resume (PDF)</Button></span>
               </Reveal>
               <Reveal>
-                <form className="contact-form card" onSubmit={handleSubmit}>
+                <form
+                  action="https://formsubmit.co/mohammedabubakkar2004@gmail.com"
+                  className="contact-form card"
+                  method="POST"
+                  onSubmit={handleSubmit}
+                >
                   <label>Name<input name="name" placeholder="Your name" required /></label>
                   <label>Email<input name="email" placeholder="you@example.com" required type="email" /></label>
                   <label>Message<textarea name="message" placeholder="Tell me about the opportunity..." required rows={5} /></label>
