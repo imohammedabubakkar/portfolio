@@ -240,8 +240,11 @@ function App() {
     setFormStatus("sending");
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append("_subject", "New portfolio contact message");
-    formData.append("_template", "table");
+    const senderName = String(formData.get("name") ?? "").trim();
+    const senderEmail = String(formData.get("email") ?? "").trim();
+    formData.set("_subject", `Portfolio message from ${senderName}`);
+    formData.set("_replyto", senderEmail);
+    formData.set("_template", "table");
 
     try {
       const response = await fetch(
